@@ -1,0 +1,19 @@
+# Server properties
+#Spring Properties
+spring:
+  application:
+    name: product-app
+
+  # Jpa Properties
+  datasource:
+    url: jdbc:mysql://${DB_HOST}/${DB_NAME}?autoReconnect=true&useSSL=false
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    generate-ddl: true
+    properties:
+      hibernate:
+        ddl-auto: update
+        show_sql: true
